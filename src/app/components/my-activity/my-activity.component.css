@@ -1,0 +1,13 @@
+div.mainView {
+    width: 1024px;
+    margin-left: 20px;
+  }
+
+div.title{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}

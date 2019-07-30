@@ -1,0 +1,45 @@
+<mat-accordion multi="true" *ngIf="itemsLenght > 0">
+  <mat-expansion-panel *ngFor="let item of items">
+    <mat-expansion-panel-header><mat-panel-title>{{item.name}}</mat-panel-title></mat-expansion-panel-header>
+    <h4>פרטי הדיווח</h4>
+    <mat-grid-list cols="5" rowHeight="3:1">
+        <mat-grid-tile>
+          <div>
+            <dt>Created by</dt>
+            <dd>{{usernameById(item.username)}}</dd>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div>
+            <dt>Category</dt>
+            <dd>{{item.category.name}}</dd>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div>
+              <dt>Color</dt>
+              <dd>{{item.color}}</dd>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div>
+              <dt>Time of incident</dt>
+              <dd>{{ itemDate(item.createTime) }}</dd>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div>
+              <dt>Location</dt>
+              <dd>{{item.location}}</dd>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <div>
+        <b>Description</b>
+        <br>
+        {{item.description}}
+      </div>
+  </mat-expansion-panel>
+</mat-accordion>
+<p *ngIf="itemsLenght <= 0">רשימת החפצים ריקה</p>
+

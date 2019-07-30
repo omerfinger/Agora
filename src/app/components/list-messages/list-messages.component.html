@@ -1,0 +1,28 @@
+
+<mat-divider style="margin-top: 20px"></mat-divider>
+<div class="title">
+    <h3>Messages</h3>
+    <button mat-icon-button color="primary" matTooltip="Write a message" (click)="writeMessage()">
+        <mat-icon aria-label="Message">add_circle</mat-icon>
+    </button>
+</div>
+<div *ngIf="messagesLength > 0">
+  <div style="margin-top: 20px">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let message of messages" hideToggle (opened)="onExpand(message)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>{{message.title}}</mat-panel-title>
+              <mat-panel-description>{{formatDate(message.create_time)}}</mat-panel-description>  
+            </mat-expansion-panel-header>
+            <mat-divider></mat-divider>
+            <div style="margin-top: 15px">
+              {{message.content}}
+            </div>
+            <div class="sentFrom">
+              Sent by {{message.fromUser.fullName}}, {{message.fromUser.mail}}
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
+<p class="noItems" *ngIf="messagesLength <= 0">No messages yet.</p>

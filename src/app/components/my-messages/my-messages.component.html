@@ -1,0 +1,20 @@
+<div *ngIf="messagesLength > 0">
+  <div style="margin-top: 20px">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let message of messages" hideToggle (opened)="onExpand(message)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>{{message.title}}</mat-panel-title>
+              <mat-panel-description><div>{{message.item.name}}</div> <div>{{formatDate(message.create_time)}}</div> </mat-panel-description>  
+            </mat-expansion-panel-header>
+            <mat-divider></mat-divider>
+            <div style="margin-top: 15px">
+              {{message.content}}
+            </div>
+            <div class="sentFrom">
+              Sent by {{message.fromUser.fullName}}, {{message.fromUser.mail}}
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
+<p class="noItems" *ngIf="messagesLength <= 0">There are no new messages.</p>

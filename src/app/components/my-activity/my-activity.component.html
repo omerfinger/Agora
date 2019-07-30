@@ -1,0 +1,24 @@
+<div class="mainView">
+    <div class="title">
+        <h1>My Activity</h1>
+        <app-create-item></app-create-item>
+    </div>
+
+    <mat-divider style="margin-top: 20px"></mat-divider>
+
+    <div class="title">
+        <h3>Unread Messages </h3>
+        <mat-chip-list>
+            <mat-chip>{{messagesAmount}}</mat-chip>
+        </mat-chip-list>
+    </div>
+
+    <app-my-messages></app-my-messages>
+
+    <div class="title">
+        <h3>Items</h3>
+    </div>
+
+    <app-list-item [user_id]="user_id"></app-list-item>
+
+</div>

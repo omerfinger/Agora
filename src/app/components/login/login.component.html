@@ -1,0 +1,30 @@
+<div class="profilePage">
+    <div class="loginBox">        
+        <div class="title">
+            <h1>Lost & Found</h1>
+        </div>
+        <div class="profileEdit">
+            <div class="profileDetails">
+                <mat-form-field>
+                    <mat-label>Mail</mat-label>
+                    <input matInput placeholder="mail" [(ngModel)]="userLogin.mail">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="password" [type]="'password'" [(ngModel)]="userLogin.password">
+                </mat-form-field>
+            </div>
+            <div class="editButtons">
+                <button mat-flat-button class="editBut" (click)="login()">
+                    Login
+                </button>
+                <a routerLink="/sign-up" routerLinkActive="active">Don't have account? Sign Up</a>
+            </div>
+            <div>
+            <div class="messageLabel">
+                <label>{{loginMessage}}</label>
+            </div>
+        </div>
+    </div>
+</div>
