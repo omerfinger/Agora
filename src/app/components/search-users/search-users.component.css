@@ -1,0 +1,19 @@
+
+.searchDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4em;
+  }
+  
+.searchDiv .mat-form-field {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    margin-right: 3em;
+  }
+
+  .searchBut {
+    padding: 0px;
+    width: 10em;
+  }
