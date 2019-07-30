@@ -1,0 +1,13 @@
+<mat-accordion multi="true" *ngIf="itemsLenght > 0">
+  <mat-expansion-panel *ngFor="let item of items">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{item.title}}</mat-panel-title>
+      <mat-panel-description>{{item.url}}</mat-panel-description>
+    </mat-expansion-panel-header>
+
+
+
+
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="noItems" *ngIf="itemsLenght <= 0">No items found.</p>

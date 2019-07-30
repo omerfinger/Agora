@@ -1,34 +1,36 @@
 mat-divider {
-    border-color: #f4fcff;
-}
-
-.navbar-header {
-    margin-top: 20px;
-    
+  border-color: #f4fcff;
 }
 
 .profilePic {
-    border: 1px solid black;
-    width: 4em;
-    height: 4em;
-    border-radius: 2em;
+  border: 1px solid black;
+  width: 4em;
+  height: 4em;
+  border-radius: 2em;
 }
 
 .navbar {
-    width: 13em;
-    margin-left: 1em;
-    color: #f4fcff !important; 
+  width: 13em;
+  margin-left: 1em;
+  color: #f4fcff !important;
+  font-family: sans-serif;
+}
+
+.navbar img {
+  margin-top: 40px;
+  height: 250%;
 }
 
 mat-toolbar {
-    background: #6391b7;
+  background: #6391b700;
 }
 
 a.username {
-    margin-bottom: 15px;
-    margin-top: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .mat-list-item {
-    color: #f4fcff !important;
+  color: #f4fcff !important;
+  font-family: sans-serif;
 }
