@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()" #createMessageForm="ngForm">
+<h2 mat-dialog-title>Write a new message</h2>
+  <mat-dialog-content>
+    <p><b>To: </b>{{toUserName}}</p>
+    <p><b>Item: </b>{{item.name}}</p>
+    <div>
+      <mat-form-field appearance="outline" style="margin-top: 25px">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Type title here" name="title" [(ngModel)]="message.title" required>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Content</mat-label>
+        <textarea matInput name="content" rows=10 [(ngModel)]="message.content" required></textarea>
+      </mat-form-field>
+    </div>  
+  </mat-dialog-content>
+  <mat-dialog-actions >
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button type="submit" mat-button cdkFocusInitial>Send</button>
+  </mat-dialog-actions>
+</form>

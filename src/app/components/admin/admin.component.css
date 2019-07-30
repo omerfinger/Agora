@@ -1,0 +1,43 @@
+.adminDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formDiv {
+  margin-top: 2em;
+  border-radius: 1.5em;
+  height: 40em;
+  width: 70em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.labels {
+  margin-top: 4em;
+  border-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+  height: 20em;
+}
+
+.btnLine {
+  height: 5em;
+}
+
+.btnRemove {
+  border-radius: 10em;
+  margin-top: 2em;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-divider {
+  width: 100%;
+  border-color: rgb(199, 198, 198);
+}
