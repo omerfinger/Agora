@@ -10,32 +10,28 @@ const users = require('./controllers/users');
 const items = require('./controllers/items');
 const categories = require('./controllers/categories');
 const messages = require('./controllers/messages');
+const craiglist = require('./controllers/craiglist');
+
 global.io = io;
 
-// Connect mongoose to our database
 mongoose.connect(config.database);
 
-//Declaring Port
 const port = 3000;
 
-// Middleware for CORS
 app.use(cors());
 
-// Middleware for bodyparsing using both json and urlencoding
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-/*express.static is a built in middleware function to serve static files.
- We are telling express server public folder is the place to look for the static files
-*/
 app.use('/api/users', users);
 app.use('/api/items', items);
 app.use('/api/categories', categories);
 app.use('/api/messages', messages);
+app.use('/api/craigslist', craiglist);
 
-app.use((req, res, next) => {
+app.use('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, "dist/Agora", index.html));
-})
+});
 
 var clients = [];
 global.clients = clients;
@@ -72,7 +68,4 @@ http.listen(port, () => {
   console.log(`Starting the server at port ${port}`);
 });
 
-
-
 module.exports = app;
-
