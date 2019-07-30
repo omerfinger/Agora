@@ -9,13 +9,11 @@ import { ItemService } from "../../services/item.service";
 export class CraigsListItem {
   items: Object[];
 
-
-  constructor(public itemService: ItemService) {
-     }
+  constructor(public itemService: ItemService) {}
 
   ngOnInit() {
     this.itemService.getCraigslistItems().subscribe(res => {
-      this.items = res
+      this.items = res;
     });
   }
   get itemsLenght() {
