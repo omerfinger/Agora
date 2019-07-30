@@ -44,3 +44,9 @@ td:first-child {
 .noItems{
   color: dimgrey;
 }
+
+.twitter {
+  margin-left: 10px;
+  background-color: #00aced;
+  color: white;
+}
