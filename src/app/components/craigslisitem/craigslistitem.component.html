@@ -2,7 +2,7 @@
   <mat-expansion-panel *ngFor="let item of items">
     <mat-expansion-panel-header>
       <mat-panel-title>{{item.title}}</mat-panel-title>
-      <mat-panel-description>{{item.url}}</mat-panel-description>
+      <mat-panel-description><a href="{{item.url}}">{{item.url}}</a></mat-panel-description>
     </mat-expansion-panel-header>
 
 
