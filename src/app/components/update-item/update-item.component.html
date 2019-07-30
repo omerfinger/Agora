@@ -1,0 +1,53 @@
+<form (ngSubmit)="onSubmit()" #updateForm="ngForm">
+<h2 mat-dialog-title>Update item details</h2>
+<mat-dialog-content>
+  <div class="subHeader"><b>{{item.kind}} item </b>| {{item.category.name}}</div>
+  <mat-grid-list cols="2" rowHeight="4:1" gutterSize="20px">  
+    <mat-grid-tile>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Item name</mat-label>
+          <input matInput placeholder="Item name" name="name" [(ngModel)]="item.name" required >
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Color</mat-label>
+            <input matInput placeholder="Color" name="color" [(ngModel)]="item.color" required>
+          </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Location</mat-label>
+            <input ngx-google-places-autocomplete matInput placeholder="Location" name="location" [(ngModel)]="item.location.name" (onAddressChange)="handleAddressChange($event)" required>
+          </mat-form-field>
+      </div>
+    </mat-grid-tile>
+  <mat-grid-tile>
+    <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Time of incident</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="create_time" [(ngModel)]="item.create_time" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+  </mat-grid-tile>
+  </mat-grid-list> 
+  <div>
+      <mat-form-field appearance="outline" style="width: 60%">
+        <mat-label>Description</mat-label>
+        <textarea matInput name="description" rows=5 [(ngModel)]="item.description"></textarea>
+      </mat-form-field>
+    </div>      
+</mat-dialog-content>
+<mat-dialog-actions >
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button type="submit" mat-button cdkFocusInitial>Update</button>
+</mat-dialog-actions>
+</form>
+      

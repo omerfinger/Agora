@@ -1,0 +1,29 @@
+<div class="profilePage">
+    <div>
+        <h1>Profile</h1>
+    </div>
+    <div class="profileEdit">
+        <div class="profileDetails">
+                <mat-form-field appearance="outline">
+                    <mat-label>Full Name</mat-label>
+                    <input matInput [(ngModel)]="userDetails.fullName">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Mail</mat-label>
+                    <input matInput [(ngModel)]="userDetails.mail">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone</mat-label>
+                    <input matInput [(ngModel)]="userDetails.phone">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>City</mat-label>
+                    <input ngx-google-places-autocomplete matInput [(ngModel)]="userDetails.city" (onAddressChange)="handleAddressChange($event)">
+                </mat-form-field>
+        </div>
+        <div class="editButtons">
+            <button mat-flat-button class="cancelBut" (click)="cancelChanges()">Cancel</button>
+            <button mat-flat-button class="editBut" (click)="saveChanges()">Save</button>
+        </div>
+    </div>
+</div>

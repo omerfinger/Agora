@@ -1,0 +1,30 @@
+<div class="profilePage">      
+    <div class="profileEdit">
+        <h1>Sign Up</h1>
+        <div class="profileDetails">
+            <mat-form-field>
+                <mat-label>Full Name</mat-label>
+                <input matInput required [(ngModel)]="userDetails.fullName">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Mail</mat-label>
+                <input matInput required type="email" [(ngModel)]="userDetails.mail">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Phone Num.</mat-label>
+                <input matInput type="tel" [(ngModel)]="userDetails.phone">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>City</mat-label>
+                <input ngx-google-places-autocomplete matInput [(ngModel)]="userDetails.city" (onAddressChange)="handleAddressChange($event)">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput required [(ngModel)]="userDetails.password">
+            </mat-form-field>
+        </div>
+        <div class="editButtons">
+            <button mat-flat-button class="editBut" (click)="addUser()">Sign Up</button>
+        </div>
+    </div>
+    </div>

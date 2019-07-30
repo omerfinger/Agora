@@ -1,0 +1,41 @@
+.profilePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileEdit {
+    height: 32em;
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 231, 231);
+    border-radius: 1.5em;
+    margin-top: 3em;
+    border: rgb(224, 201, 201) 1px solid;
+}
+
+.profileDetails {
+    height: 23em;
+    width: 17em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.editButtons {
+    width: 12em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.editBut {
+    background-color: rgb(168, 204, 250);
+    border-radius: 10em;
+}

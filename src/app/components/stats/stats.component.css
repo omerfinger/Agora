@@ -1,0 +1,39 @@
+.statsDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mapDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3em;
+}
+
+.map {
+    height: 30em;
+    width: 30em;
+}
+
+.chartsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30em;
+    margin-top: 2em;
+    margin-left: 10em;
+}
+
+.pieChart {
+    height: 18em;
+    width: 18em;
+}
+
+.barChart {
+    height: 18em;
+    width: 18em;
+    padding-top: 10em;
+}

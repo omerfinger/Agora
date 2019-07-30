@@ -1,0 +1,9 @@
+div.first {
+    width: 100%; display: flex; align-items: flex-start;
+  }
+
+  .divider{
+    width:10px;
+    height:auto;
+    display:inline-block;
+  }

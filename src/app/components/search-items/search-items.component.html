@@ -1,0 +1,38 @@
+<mat-grid-list cols="4" rowHeight="3:1">
+  <form (ngSubmit)="onSearchItem()" #searchForm="ngForm">
+  <mat-grid-tile>
+    <div class="first">
+      <mat-form-field appearance="outline">
+        <mat-label>Item name</mat-label>
+        <input matInput placeholder="Item name" name="name" [(ngModel)]="item.name">
+      </mat-form-field>
+    </div>
+  </mat-grid-tile>
+  
+  <mat-grid-tile>
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <mat-select placeholder="Category" name="category" [(ngModel)]="item.category" required>
+        <mat-option *ngFor="let category of categories" [value]="category" >
+          {{category}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-form-field appearance="outline">
+      <mat-label>Time of incident</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="create_time" [(ngModel)]="item.create_time">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <button type="submit" mat-stroked-button cdkFocusInitial color="primary">Search</button>
+    <div class="divider"></div>
+    <button type="reset" mat-stroked-button (click)="onReset()">Reset</button>
+  </mat-grid-tile>
+</form>
+</mat-grid-list>

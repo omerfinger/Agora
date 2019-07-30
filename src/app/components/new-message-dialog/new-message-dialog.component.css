@@ -1,0 +1,30 @@
+div.cont{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+div.content{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+div.comment{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+div.button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
