@@ -1,8 +1,12 @@
 <div class="statsDiv">
   <div class="mapDiv">
     <agm-map class="map" [latitude]='latitude' [longitude]='longitude' [mapTypeId]='mapType'>
-      <agm-marker [latitude]="item.location.lat" [longitude]="item.location.lng" [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/red-dot.png'" *ngFor="let item of lostItems; let i=index"></agm-marker>
-      <agm-marker [latitude]="item.location.lat" [longitude]="item.location.lng" [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/green-dot.png'" *ngFor="let item of foundItems; let i=index"></agm-marker>
+      <agm-marker [latitude]="item.location.lat" [longitude]="item.location.lng"
+        [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/red-dot.png'" *ngFor="let item of lostItems; let i=index">
+      </agm-marker>
+      <agm-marker [latitude]="item.location.lat" [longitude]="item.location.lng"
+        [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/green-dot.png'"
+        *ngFor="let item of foundItems; let i=index"></agm-marker>
     </agm-map>
   </div>
   <div class="chartsDiv">
@@ -11,7 +15,8 @@
       <pie-chart [pieData]="pieChartData"></pie-chart>
     </div>
     <div class="barChart">
-        <h4>Users who sent messages: {{allMessages | messagesPipe}}</h4>
+      <h4>Users who sent messages: {{allMessages | messagesPipe}}</h4>
+      <bar-chart [data]="barChartData"></bar-chart>
     </div>
   </div>
 </div>

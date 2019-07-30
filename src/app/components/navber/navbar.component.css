@@ -19,6 +19,11 @@ mat-divider {
 .navbar img {
   margin-top: 40px;
   height: 250%;
+  transition: all 2s;
+}
+
+.navbar img:hover {
+  height: 350%;
 }
 
 mat-toolbar {

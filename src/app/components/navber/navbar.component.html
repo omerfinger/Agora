@@ -1,10 +1,10 @@
-<div class="navbar">
+<nav class="navbar">
   <mat-toolbar>
-    <div class="navbar-header">
+    <header class="navbar-header">
       <mat-toolbar-row>
         <img src="../../../assets/img/agora.png" />
       </mat-toolbar-row>
-    </div>
+    </header>
   </mat-toolbar>
   <mat-nav-list>
     <a class="username" mat-list-item routerLink='/home/user'>
@@ -19,4 +19,4 @@
     <a *ngIf="user.admin" mat-list-item routerLink="/home/admin">Users</a>
     <a *ngIf="user.admin" mat-list-item routerLink="/home/stats">Stats</a>
   </mat-nav-list>
-</div>
+</nav>

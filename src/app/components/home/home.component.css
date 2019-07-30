@@ -5,9 +5,12 @@
   left: 0;
   right: 0;
   background-image: linear-gradient(to right bottom, rgba(238, 232, 207, 0.897), rgba(243, 192, 125, 0.822)), url(../../../assets/img/bgphoto.jpg);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
-  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: "Bitstream Vera Serif Bold";
+  src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
 }
 
 .sidenav {

@@ -1,13 +1,23 @@
 div.mainView {
-    width: 1024px;
-    margin-left: 20px;
-  }
+  width: 1024px;
+  margin-left: 20px;
+}
 
-div.title{
+div.title {
   margin-top: 20px;
   margin-bottom: 20px;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
+}
+
+iframe {
+  border-radius: 50px;
+}
+
+footer {
+  margin-top: 30px;
+  bottom: 0;
+  column-count: 5;
 }
