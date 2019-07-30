@@ -7,5 +7,5 @@ import { Kind } from 'src/app/models/item';
   styleUrls: ['./lost.component.css']
 })
 export class Lost {
-  scope_kind = Kind.Lost;
+  scope_kind = Kind.Take;
 }

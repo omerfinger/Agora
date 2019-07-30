@@ -11,7 +11,7 @@ const itemSchema = Schema({
   },
   kind: {
     type: String,
-    enum: ["Lost", "Found"],
+    enum: ["Take", "Give"],
     required: true
   },
   category: {

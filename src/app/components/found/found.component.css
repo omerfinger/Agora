@@ -1,4 +1,9 @@
 div.mainView {
-    width: 1024px;
-    margin-left: 20px;
-  }
+  width: 1024px;
+  margin-left: 20px;
+}
+
+.divider {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
