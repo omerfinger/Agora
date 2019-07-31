@@ -32,7 +32,10 @@ export class Stats {
 
   ngOnInit() {
     this.itemService.getItemsByCategoryPieChart().subscribe(res => {
-      console.log(res.data);
+      this.barChartData = [
+        { letter: "omerfinger", frequency: 1 },
+        { letter: "matandan", frequency: 1 }
+      ];
       this.pieChartData = res.data.map(item => {
         return {
           label: `${item._id.name} (${item.count})`,

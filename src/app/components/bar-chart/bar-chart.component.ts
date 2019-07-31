@@ -21,7 +21,7 @@ export class BarChartComponent implements OnInit, OnChanges {
   @Input()
   data: barData[];
 
-  margin = { top: 20, right: 20, bottom: 30, left: 40 };
+  margin = { top: 20, right: 50, bottom: 30, left: 40 };
 
   constructor() {}
 
