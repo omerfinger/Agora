@@ -27,6 +27,14 @@
 
 </div>
 
+<div class="prediction">
+  <h3>Usage prediction</h3>
+  <input [(ngModel)]="gender" type='text' class='gender' placeholder="gender">
+  <input [(ngModel)]="age" type='text' class='age' placeholder="age">
+  <button (click)='sendPrediction()' class='predict'>Predict</button>
+  <span>{{result}}</span>
+</div>
+
 <footer>
   <p> Our site is for free give and take products, for nice people, to shate love and recycle our life!
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna

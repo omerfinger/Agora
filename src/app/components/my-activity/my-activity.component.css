@@ -12,6 +12,27 @@ div.title {
 
 }
 
+.prediction {
+  margin: 20px;
+}
+
+.prediction input {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.prediction button {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 iframe {
   border-radius: 50px;
 }

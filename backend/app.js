@@ -11,7 +11,7 @@ const items = require('./controllers/items');
 const categories = require('./controllers/categories');
 const messages = require('./controllers/messages');
 const craiglist = require('./controllers/craiglist');
-
+const learning = require('./controllers/learning');
 global.io = io;
 
 mongoose.connect(config.database);
@@ -20,7 +20,9 @@ const port = 3000;
 
 app.use(cors());
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(bodyParser.json());
 
 app.use('/api/users', users);
@@ -28,6 +30,7 @@ app.use('/api/items', items);
 app.use('/api/categories', categories);
 app.use('/api/messages', messages);
 app.use('/api/craigslist', craiglist);
+app.use('/api/learning', learning);
 
 app.use('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, "dist/Agora", index.html));
@@ -37,10 +40,10 @@ var clients = [];
 global.clients = clients;
 
 io.on('connection', socket => {
-  
+
   console.log('user connected');
 
-  socket.on('sendUser', (id)=>{
+  socket.on('sendUser', (id) => {
     clients.push({
       id: id,
       "socket": socket.id
@@ -48,9 +51,9 @@ io.on('connection', socket => {
     console.log(clients);
 
   });
-  
-  socket.on('disconnect', function(){
-    var index = clients.find((client, i) =>{
+
+  socket.on('disconnect', function () {
+    var index = clients.find((client, i) => {
       if (client.socket == socket.id) {
         return i;
       }
@@ -59,7 +62,7 @@ io.on('connection', socket => {
     console.log(clients);
     console.log('user disconnected');
   });
-  
+
 
 });
 
