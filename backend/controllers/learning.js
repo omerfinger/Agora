@@ -31,6 +31,23 @@ const training_data = [{
   },
   {
     "gender": "M",
+    "age": "80",
+    "gave": true
+  },
+  {
+    "gender": "M",
+    "age": "80",
+    "gave": true
+  }, {
+    "gender": "M",
+    "age": "90",
+    "gave": true
+  }, {
+    "gender": "M",
+    "age": "60",
+    "gave": true
+  }, {
+    "gender": "M",
     "age": "70",
     "gave": true
   },
@@ -66,7 +83,32 @@ const training_data = [{
   },
   {
     "gender": "F",
+    "age": "75",
+    "gave": false
+  },
+  {
+    "gender": "F",
     "age": "85",
+    "gave": false
+  },
+  {
+    "gender": "F",
+    "age": "55",
+    "gave": false
+  },
+  {
+    "gender": "F",
+    "age": "85",
+    "gave": false
+  },
+  {
+    "gender": "F",
+    "age": "65",
+    "gave": false
+  },
+  {
+    "gender": "F",
+    "age": "65",
     "gave": false
   }
 ];
