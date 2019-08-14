@@ -34,7 +34,8 @@ export class Stats {
     this.itemService.getItemsByCategoryPieChart().subscribe(res => {
       this.barChartData = [
         { letter: "omerfinger", frequency: 1 },
-        { letter: "matandan", frequency: 1 }
+        { letter: "matandan", frequency: 2 },
+        { letter: "barmolot", frequency: 0 }
       ];
       this.pieChartData = res.data.map(item => {
         return {
