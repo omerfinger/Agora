@@ -16,8 +16,8 @@
     <mat-grid-tile>
       <div>
           <mat-form-field appearance="outline">
-            <mat-label>Lost or Found?</mat-label>
-            <mat-select placeholder="Lost or Found?" name="kind" [(ngModel)]="item.kind">
+            <mat-label>Give or Take?</mat-label>
+            <mat-select placeholder="Give or Take?" name="kind" [(ngModel)]="item.kind">
               <mat-option *ngFor="let kind of kinds" [value]="kind" required>
                 {{kind}}
               </mat-option>
@@ -84,4 +84,3 @@
     <button type="submit" mat-button cdkFocusInitial>Create</button>
 </mat-dialog-actions>
 </form>
-      
