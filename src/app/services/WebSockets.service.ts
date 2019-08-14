@@ -1,30 +1,25 @@
-import { Injectable } from '@angular/core';
-import * as socketIo from 'socket.io-client';
-import * as Rx from 'rxjs';
-import { Observable } from 'rxjs';
+import { Injectable } from "@angular/core";
+import * as socketIo from "socket.io-client";
+import * as Rx from "rxjs";
+import { Observable } from "rxjs";
 
-
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: "root" })
 export class WebsocketService {
-
   private socket;
 
   constructor() {
-    this.socket = socketIo();
-   }
+    this.socket = socketIo("http://localhost:3000/");
+  }
 
-   sendUserID(id: string) {
-     this.socket.emit('sendUser', id);
-   }
+  sendUserID(id: string) {
+    this.socket.emit("sendUser", id);
+  }
 
-   public newMessage = () => {
-    return Observable.create((observer) => {
-        this.socket.on('newMessage', (message) => {
-            observer.next(message);
-        });
+  public newMessage = () => {
+    return Observable.create(observer => {
+      this.socket.on("newMessage", message => {
+        observer.next(message);
+      });
     });
-}
-
-
-
+  };
 }
