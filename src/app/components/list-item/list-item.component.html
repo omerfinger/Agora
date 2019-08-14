@@ -6,41 +6,41 @@
     </mat-expansion-panel-header>
     <h3>Report details</h3>
     <table>
-        <tr>
-            <td>Created by</td>
-            <td>{{item.username.fullName}}</td>
-        </tr>
-        <tr>
-            <td>Category</td>
-            <td>{{item.category.name}}</td>
-        </tr>
-        <tr>
-              <td>Color</td>
-              <td>{{item.color}}</td>
-        </tr>
-        <tr>
-              <td>Time of incident</td>
-              <td>{{ itemDate(item.create_time) }}</td>
-        </tr>
-      </table>
+      <tr>
+        <td>Created by</td>
+        <td>{{item.username.fullName}}</td>
+      </tr>
+      <tr>
+        <td>Category</td>
+        <td>{{item.category.name}}</td>
+      </tr>
+      <tr>
+        <td>Color</td>
+        <td>{{item.color}}</td>
+      </tr>
+      <tr>
+        <td>Time of incident</td>
+        <td>{{ itemDate(item.create_time) }}</td>
+      </tr>
+    </table>
     <br>
     <div class="item-desc">
-        <b>Description</b>
-        <br>
-        {{item.description}}
-      </div>
-      <app-list-messages [item]="item"></app-list-messages>
-      <div id="edit-btn" *ngIf="isChangable(item)">
-        <button mat-mini-fab color="warn" matTooltip="Delete item" (click)="delete(item)">
-            <mat-icon aria-label="Delete">delete</mat-icon>
-        </button>
-        <div class="divider"></div>
-        <button mat-mini-fab color="primary" matTooltip="Edit item Details" (click)="edit(item)">
-            <mat-icon aria-label="Edit">edit</mat-icon>
-        </button>
-        <a mat-flat-button class="twitter" href="https://twitter.com/intent/tweet?text=I am currently using Agora application!" target="_blank">Tweet!</a>
-      </div>
+      <b>Description</b>
+      <br>
+      {{item.description}}
+    </div>
+    <app-list-messages [item]="item"></app-list-messages>
+    <div id="edit-btn" *ngIf="isChangable(item)">
+      <button mat-mini-fab color="warn" matTooltip="Delete item" (click)="delete(item)">
+        <mat-icon aria-label="Delete">delete</mat-icon>
+      </button>
+      <section class="divider"></section>
+      <button mat-mini-fab color="primary" matTooltip="Edit item Details" (click)="edit(item)">
+        <mat-icon aria-label="Edit">edit</mat-icon>
+      </button>
+      <a mat-flat-button class="twitter"
+        href="https://twitter.com/intent/tweet?text=I am currently using Agora application!" target="_blank">Tweet!</a>
+    </div>
   </mat-expansion-panel>
 </mat-accordion>
 <p class="noItems" *ngIf="itemsLenght <= 0">No items found.</p>
-
