@@ -26,7 +26,7 @@
     "@angular/router": "~7.2.0",
     "@types/googlemaps": "^3.30.18",
     "@types/socket.io-client": "^1.4.32",
-    "cheerio": "^1.0.0-rc.2",
+    "cheerio": "^1.0.0",
     "core-js": "^2.5.4",
     "cors": "^2.8.5",
     "d3": "^7.0.0",
